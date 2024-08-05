@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #2c3e50;
+        }
+        #gameContainer {
+            display: flex;
+            flex-direction: row;
+        }
+        #gui {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #0e6c6b;
+            width: 350px;
+            padding: 20px;
+            border-radius: 15px;
+            color: #ecf0f1;
+            margin-left: 20px;
+        }
+        #gui h1, #gui div, #gui button, #gui input {
+            margin: 10px 0;
+        }
+        #gui button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1abc9c;
+            color: #fff;
+            cursor: pointer;
+        }
+        #gui button:hover {
+            background-color: #16a085;
+        }
+        #gui input[type="checkbox"] {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="game"></div>
+        <div id="gui">
+            <h1>Snake Game</h1>
+            <div>Best: <span id="best-score">0</span></div>
+            <div>Score: <span id="current-score">0</span></div>
+            <div id="modes">
+                <label><input type="radio" name="mode" value="classic" checked> Classic</label>
+                <label><input type="radio" name="mode" value="noDie"> No Die</label>
+                <label><input type="radio" name="mode" value="walls"> Walls</label>
+                <label><input type="radio" name="mode" value="portal"> Portal</label>
+                <label><input type="radio" name="mode" value="speed"> Speed</label>
+            </div>
+            <button id="play-button">Play</button>
+            <button id="exit-button">Exit</button>
+            <button id="menu-button" style="display: none;">Menu</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
